@@ -1,0 +1,5 @@
+@SpringBootApplication注解有三个功能：
+自动加载@EnableAutoConfiguration
+包扫描@ComponentScan
+配置类或者XML文件注册@Configuration
+

@@ -1,0 +1,51 @@
+debug: TRUE
+server:
+  port: 28080
+spring:
+  application:
+    name: consumer-0
+    admin:
+      enabled: true # 开启MbeanServer，方便远程查看JVM情况
+  security:
+    user:
+      name: admin
+      password: admin
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/shortURL
+    username: root
+    password: 123456
+    druid:
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      filters: stat,wall,slf4j
+      initial-size: 2
+      maxActive: 3
+      maxPoolPreparedStatementPerConnectionSize: 20
+      maxWait: 6000
+      minEvictableIdleTimeMillis: 300000
+      minIdle: 2
+      poolPreparedStatements: true
+      testOnBorrow: false
+      testOnReturn: false
+      testWhileIdle: true
+      timeBetweenEvictionRunsMillis: 60000
+      validationQuery: SELECT 1 FROM DUAL
+feign:
+  hystrix:
+    enabled: true
+#ribbon:
+#  eureka:
+#    enabled: false
+eureka:
+  client:
+    service-url: 
+     defaultZone: http://admin:admin@localhost:38080/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      grayTestFlag: true
+      abTestFlag: true
+provider: 
+  name: provide-0

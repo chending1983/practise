@@ -1,0 +1,2 @@
+org.springframework.boot.env.EnvironmentPostProcessor=com.cl.elena.cloudclient.main.config.CustomizeEnvironmentPostProcessor
+org.springframework.context.ApplicationListener=com.cl.elena.cloudclient.main.config.CustomizeListener
