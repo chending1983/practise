@@ -1,0 +1,25 @@
+#server:
+#  port: 28081
+spring:
+  application:
+    name: provide-0
+  security:
+    user:
+      name: admin
+      password: admin
+eureka:
+  client:
+    service-url: 
+     defaultZone: http://admin:admin@localhost:38080/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    metadata-map:
+      ISP: 
+      location: 
+      ipAddress: 
+      phoneType:
+      chinamobile: cmcc
+      chinaunicom: cucc
+      chinatelecom: ctcc
+      grayTestFlag: true
+      abTestFlag: true
