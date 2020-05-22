@@ -1,0 +1,23 @@
+debug: false
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    healthcheck:
+      enabled: true
+    service-url:
+     defaultZone: http://localhost:38080/eureka/
+  instance:
+    hostname: localhost
+    status-page-url-path: http://localhost:38080/info
+    health-check-url-path: http://localhost:38080/health
+  server:
+    enable-self-preservation: false
+server:
+  port: 38080
+
