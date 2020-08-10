@@ -27,6 +27,7 @@ public class ProxyUtils implements AutoCloseable{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
+			System.out.println("finally");
 		}
 
 	}
