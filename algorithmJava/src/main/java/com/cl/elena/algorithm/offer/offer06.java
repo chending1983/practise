@@ -32,6 +32,7 @@ public class offer06 {
 		ListNode next;
 		ListNode(int x) {
 			val = x;
+			next = null;
 		}
 
 	}
