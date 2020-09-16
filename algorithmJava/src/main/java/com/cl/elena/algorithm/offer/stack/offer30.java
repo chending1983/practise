@@ -1,4 +1,4 @@
-package com.cl.elena.algorithm.offer;
+package com.cl.elena.algorithm.offer.stack;
 
 import java.util.Stack;
 

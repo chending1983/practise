@@ -1,4 +1,4 @@
-package com.cl.elena.algorithm.offer;
+package com.cl.elena.algorithm.offer.heap;
 
 import java.util.PriorityQueue;
 import java.util.Queue;

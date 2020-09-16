@@ -1,6 +1,5 @@
-package com.cl.elena.algorithm.offer;
+package com.cl.elena.algorithm.offer.stack;
 
-import java.util.Deque;
 import java.util.Stack;
 
 public class offer09 {
